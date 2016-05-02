@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2F165C7F1CD16C9800647C67 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C7E1CD16C9800647C67 /* main.swift */; };
+		2F165C861CD16CB300647C67 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C851CD16CB300647C67 /* Arguments.swift */; };
+		2F165C881CD16CBC00647C67 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C871CD16CBC00647C67 /* Router.swift */; };
+		2F165C8A1CD16CCB00647C67 /* PathTraveler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C891CD16CCB00647C67 /* PathTraveler.swift */; };
+		2F165C921CD16D5000647C67 /* HelpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C911CD16D5000647C67 /* HelpPath.swift */; };
+		2F165C941CD16D5E00647C67 /* StoryboardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C931CD16D5E00647C67 /* StoryboardPath.swift */; };
+		2F165C961CD16E8C00647C67 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C951CD16E8C00647C67 /* FileFinder.swift */; };
+		2FB954761CD7B1980046FDC7 /* StoryboardParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */; };
+		2FB9547B1CD7C56E0046FDC7 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */; };
+		2FB9547D1CD7EAA90046FDC7 /* CreateFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +34,15 @@
 /* Begin PBXFileReference section */
 		2F165C7B1CD16C9800647C67 /* XcodeExtractor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XcodeExtractor; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F165C7E1CD16C9800647C67 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2F165C851CD16CB300647C67 /* Arguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = "<group>"; };
+		2F165C871CD16CBC00647C67 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2F165C891CD16CCB00647C67 /* PathTraveler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathTraveler.swift; sourceTree = "<group>"; };
+		2F165C911CD16D5000647C67 /* HelpPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPath.swift; sourceTree = "<group>"; };
+		2F165C931CD16D5E00647C67 /* StoryboardPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardPath.swift; sourceTree = "<group>"; };
+		2F165C951CD16E8C00647C67 /* FileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFinder.swift; sourceTree = "<group>"; };
+		2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardParser.swift; sourceTree = "<group>"; };
+		2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				2F165C7D1CD16C9800647C67 /* XcodeExtractor */,
+				2FB954771CD7B1B50046FDC7 /* Utilities */,
 				2F165C7C1CD16C9800647C67 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,7 +77,48 @@
 			isa = PBXGroup;
 			children = (
 				2F165C7E1CD16C9800647C67 /* main.swift */,
+				2F165C8B1CD16CF500647C67 /* Setup */,
+				2F165C8D1CD16D0F00647C67 /* Help Path */,
+				2F165C8E1CD16D1700647C67 /* Storyboard Path */,
 			);
+			path = XcodeExtractor;
+			sourceTree = "<group>";
+		};
+		2F165C8B1CD16CF500647C67 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				2F165C851CD16CB300647C67 /* Arguments.swift */,
+				2F165C871CD16CBC00647C67 /* Router.swift */,
+				2F165C891CD16CCB00647C67 /* PathTraveler.swift */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
+		2F165C8D1CD16D0F00647C67 /* Help Path */ = {
+			isa = PBXGroup;
+			children = (
+				2F165C911CD16D5000647C67 /* HelpPath.swift */,
+			);
+			name = "Help Path";
+			sourceTree = "<group>";
+		};
+		2F165C8E1CD16D1700647C67 /* Storyboard Path */ = {
+			isa = PBXGroup;
+			children = (
+				2F165C931CD16D5E00647C67 /* StoryboardPath.swift */,
+				2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */,
+			);
+			name = "Storyboard Path";
+			sourceTree = "<group>";
+		};
+		2FB954771CD7B1B50046FDC7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */,
+				2F165C951CD16E8C00647C67 /* FileFinder.swift */,
+				2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */,
+			);
+			name = Utilities;
 			path = XcodeExtractor;
 			sourceTree = "<group>";
 		};
@@ -119,7 +179,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F165C861CD16CB300647C67 /* Arguments.swift in Sources */,
+				2F165C921CD16D5000647C67 /* HelpPath.swift in Sources */,
+				2FB954761CD7B1980046FDC7 /* StoryboardParser.swift in Sources */,
+				2F165C881CD16CBC00647C67 /* Router.swift in Sources */,
 				2F165C7F1CD16C9800647C67 /* main.swift in Sources */,
+				2F165C8A1CD16CCB00647C67 /* PathTraveler.swift in Sources */,
+				2F165C961CD16E8C00647C67 /* FileFinder.swift in Sources */,
+				2FB9547B1CD7C56E0046FDC7 /* SegueHandlerType.swift in Sources */,
+				2F165C941CD16D5E00647C67 /* StoryboardPath.swift in Sources */,
+				2FB9547D1CD7EAA90046FDC7 /* CreateFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +310,7 @@
 				2F165C841CD16C9800647C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

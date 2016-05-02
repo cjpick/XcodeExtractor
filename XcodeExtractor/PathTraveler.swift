@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  PathTraveler.swift
 //  XcodeExtractor
 //
 //  Created by Christopher Pick on 4/27/16.
@@ -8,9 +8,7 @@
 
 import Foundation
 
-print("Starting....")
-let router = Router(arg: Arguments())
-router.route()
-
-print("Ended!")
+protocol PathTraveler {
+    func walk()
+}
 
