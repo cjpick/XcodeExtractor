@@ -45,11 +45,11 @@ struct SegueData {
         return controllers
     }
     
-    func seguesFor(controller:String)->[String] {
+    func seguesFor(_ controller:String)->[String] {
         return data[controller] ?? []
     }
     
-    mutating func add(controller:String, segue:String) {
+    mutating func add(_ controller:String, segue:String) {
         if (data[controller] != nil) {
             data[controller]?.append(segue)
         } else {
@@ -58,7 +58,7 @@ struct SegueData {
         
     }
     
-    mutating func append(additionalData:SegueData) {
+    mutating func append(_ additionalData:SegueData) {
         for (controller, segues) in additionalData.data {
             for segue in segues {
                 add(controller, segue: segue)

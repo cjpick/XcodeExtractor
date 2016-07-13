@@ -17,6 +17,7 @@
 		2FB954761CD7B1980046FDC7 /* StoryboardParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */; };
 		2FB9547B1CD7C56E0046FDC7 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */; };
 		2FB9547D1CD7EAA90046FDC7 /* CreateFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */; };
+		2FCCE34D1D35D63300236A92 /* String+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCCE34C1D35D63300236A92 /* String+Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,9 +41,12 @@
 		2F165C911CD16D5000647C67 /* HelpPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpPath.swift; sourceTree = "<group>"; };
 		2F165C931CD16D5E00647C67 /* StoryboardPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardPath.swift; sourceTree = "<group>"; };
 		2F165C951CD16E8C00647C67 /* FileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFinder.swift; sourceTree = "<group>"; };
+		2F8725051D35D8750091CFDE /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardParser.swift; sourceTree = "<group>"; };
 		2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateFile.swift; sourceTree = "<group>"; };
+		2FCCE34C1D35D63300236A92 /* String+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extras.swift"; sourceTree = "<group>"; };
+		2FCCE34E1D35D6F100236A92 /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 		2F165C721CD16C9800647C67 = {
 			isa = PBXGroup;
 			children = (
+				2FCCE34E1D35D6F100236A92 /* test.storyboard */,
+				2F8725051D35D8750091CFDE /* SegueHandlerType.swift */,
 				2F165C7D1CD16C9800647C67 /* XcodeExtractor */,
 				2FB954771CD7B1B50046FDC7 /* Utilities */,
 				2F165C7C1CD16C9800647C67 /* Products */,
@@ -117,6 +123,7 @@
 				2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */,
 				2F165C951CD16E8C00647C67 /* FileFinder.swift */,
 				2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */,
+				2FCCE34C1D35D63300236A92 /* String+Extras.swift */,
 			);
 			name = Utilities;
 			path = XcodeExtractor;
@@ -149,11 +156,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Christopher Pick";
 				TargetAttributes = {
 					2F165C7A1CD16C9800647C67 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -187,6 +195,7 @@
 				2F165C8A1CD16CCB00647C67 /* PathTraveler.swift in Sources */,
 				2F165C961CD16E8C00647C67 /* FileFinder.swift in Sources */,
 				2FB9547B1CD7C56E0046FDC7 /* SegueHandlerType.swift in Sources */,
+				2FCCE34D1D35D63300236A92 /* String+Extras.swift in Sources */,
 				2F165C941CD16D5E00647C67 /* StoryboardPath.swift in Sources */,
 				2FB9547D1CD7EAA90046FDC7 /* CreateFile.swift in Sources */,
 			);
@@ -281,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -288,6 +298,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

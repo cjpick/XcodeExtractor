@@ -27,23 +27,23 @@ enum Elements:String {
     
 }
 
-class StoryboardParser:NSObject, NSXMLParserDelegate {
+class StoryboardParser:NSObject, XMLParserDelegate {
     
     var data = SegueData()
     private var currentViewController:String = ""
     
-    let parser:NSXMLParser
+    let parser:XMLParser
     
-    init(path:NSURL) {
-        let data = NSData(contentsOfURL: path)!
-        parser = NSXMLParser(data: data)
+    init(path:URL) {
+        let data = try! Data(contentsOf: path)
+        parser = XMLParser(data: data)
         super.init()
         
         parser.delegate = self
         parser.parse()
     }
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName Name: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName Name: String?, attributes attributeDict: [String : String]) {
         if let element = Elements(rawValue: elementName) {
             switch element {
             case Elements.Segue:

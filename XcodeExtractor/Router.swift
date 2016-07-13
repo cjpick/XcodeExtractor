@@ -21,9 +21,9 @@ struct Router {
         
         for path in arguments.paths {
             switch path {
-            case .Help:
+            case .help:
                 HelpPath(arg: arguments).walk()
-            case .Storyboard:
+            case .storyboard:
                 StoryboardPath(arg: arguments).walk()
             }
         }

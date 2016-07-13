@@ -9,17 +9,17 @@
 import Foundation
 
 enum Path {
-    case Help
-    case Storyboard
+    case help
+    case storyboard
 }
 
 struct Arguments {
-    let workingDir:NSURL
+    let workingDir:URL
     let paths:[Path]
     
     init() {
         var directory:String = ""
-        let args = NSProcessInfo.processInfo().arguments
+        let args = ProcessInfo.processInfo.arguments
         var i = 1
         var tempPaths = [Path]()
         while i < args.count {
@@ -28,22 +28,23 @@ struct Arguments {
                 i += 1
                 directory = args[i]
             case "-s":
-                tempPaths.append(Path.Storyboard)
+                tempPaths.append(Path.storyboard)
             case "-h":
-                tempPaths.append(Path.Help)
+                tempPaths.append(Path.help)
             case "--help":
-                tempPaths.append(Path.Help)
+                tempPaths.append(Path.help)
             default:
-                print("Unknown: \(args[i])")
+                print("Unknown: \(args[i]). Type XcodeExtracor -h for help.")
+                exit(1)
             }
             i += 1
         }
         paths = tempPaths
         
         if directory == "" {
-            self.workingDir = NSURL(fileURLWithPath: NSProcessInfo.processInfo().environment["PWD"] ?? "")
+            self.workingDir = URL(fileURLWithPath: ProcessInfo.processInfo.environment["PWD"] ?? "")
         } else {
-            self.workingDir = NSURL(fileURLWithPath: directory)
+            self.workingDir = URL(fileURLWithPath: directory)
         }
         
     }

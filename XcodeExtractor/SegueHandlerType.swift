@@ -26,15 +26,19 @@ struct SegueHandlerTypeCreator {
     
     func segueHandlerType()->String {
         var handler = ""
-        handler += "//\n"
-        handler += "//  SegueHandlerType.swift\n"
-        handler += "//\n"
+        handler += "//" + String.newLine()
+        handler += "//  SegueHandlerType.swift" + String.newLine()
+        handler += "//  Automatically built by XcodeExtractor" + String.newLine()
+        handler += "//" + String.newLine()
+        handler += String.newLine()
         
         handler += "import UIKit\n"
+        handler += String.newLine()
         
         handler += "public protocol SegueHandlerType {\n"
         handler += "    associatedtype SegueIdentifier: RawRepresentable\n"
         handler += "}\n"
+        handler += String.newLine()
         
         handler += "extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValue == String {\n"
             
@@ -47,7 +51,8 @@ struct SegueHandlerTypeCreator {
         handler += "            else { fatalError(\"Invalid segue identifier \\(segue.identifier).\") }\n"
         handler += "        return segueIdentifier\n"
         handler += "    }\n"
-        handler += "}\n\n\n"
+        handler += "}"
+        handler += String.newLine() + String.newLine()
         
         return handler
     }
@@ -58,7 +63,7 @@ struct SegueHandlerTypeCreator {
             extensions += "extension \(controller):SegueHandlerType {\n"
             extensions += "    enum SegueIdentifier:String {\n"
             for segue in data.seguesFor(controller) {
-                extensions += "        case \(convertSegueToCase(segue)) = \"\(segue)\"\n"
+                extensions += "        case \(segue.convertedSegueToCase())) = \"\(segue)\"\n"
             }
             extensions += "    }\n"
             extensions += "}\n\n"
@@ -67,10 +72,6 @@ struct SegueHandlerTypeCreator {
         }
         return extensions
     }
-    func convertSegueToCase(segue:String)->String {
-        return segue.stringByReplacingOccurrencesOfString(" ", withString: "")
-    }
-    
 }
 
 

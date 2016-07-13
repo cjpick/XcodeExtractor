@@ -16,9 +16,9 @@ struct CreateFile {
         self.arguments = arguments
     }
     
-    func create(fileName:String, data:String) {
-        let url = arguments.workingDir.URLByAppendingPathComponent("\(fileName).swift")
-        try! data.writeToURL(url, atomically: true, encoding:NSASCIIStringEncoding)
+    func create(_ fileName:String, data:String) {
+        let url = try! arguments.workingDir.appendingPathComponent("\(fileName).swift")
+        try! data.write(to: url, atomically: true, encoding:String.Encoding.ascii)
     }
     
 }

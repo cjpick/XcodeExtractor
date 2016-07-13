@@ -8,9 +8,6 @@
 
 import Foundation
 
-print("Starting....")
 let router = Router(arg: Arguments())
 router.route()
-
-print("Ended!")
 

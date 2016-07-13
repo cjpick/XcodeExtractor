@@ -10,20 +10,20 @@ import Foundation
 
 struct FileFinder {
     
-    let directory:NSURL
+    let directory:URL
     let pathExtension:String
     
-    init(directory:NSURL, pathExtension:String) {
+    init(directory:URL, pathExtension:String) {
         self.directory = directory
         self.pathExtension = pathExtension
     }
     
-    func find()->[NSURL] {
-        let localFileManager = NSFileManager()
-        let directoryEnumerator = localFileManager.enumeratorAtURL(directory, includingPropertiesForKeys: [], options: [.SkipsHiddenFiles], errorHandler: nil)!
+    func find()->[URL] {
+        let localFileManager = FileManager()
+        let directoryEnumerator = localFileManager.enumerator(at: directory, includingPropertiesForKeys: [], options: [.skipsHiddenFiles], errorHandler: nil)!
         
-        var fileURLs: [NSURL] = []
-        for case let fileURL as NSURL in directoryEnumerator {
+        var fileURLs: [URL] = []
+        for case let fileURL as URL in directoryEnumerator {
             if pathExtension == fileURL.pathExtension {
                 fileURLs.append(fileURL)
             }
