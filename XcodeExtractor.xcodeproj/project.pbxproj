@@ -14,6 +14,7 @@
 		2F165C921CD16D5000647C67 /* HelpPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C911CD16D5000647C67 /* HelpPath.swift */; };
 		2F165C941CD16D5E00647C67 /* StoryboardPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C931CD16D5E00647C67 /* StoryboardPath.swift */; };
 		2F165C961CD16E8C00647C67 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F165C951CD16E8C00647C67 /* FileFinder.swift */; };
+		2F8725081D3710830091CFDE /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2F8725071D3710830091CFDE /* README.md */; };
 		2FB954761CD7B1980046FDC7 /* StoryboardParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */; };
 		2FB9547B1CD7C56E0046FDC7 /* SegueHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */; };
 		2FB9547D1CD7EAA90046FDC7 /* CreateFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */; };
@@ -42,6 +43,7 @@
 		2F165C931CD16D5E00647C67 /* StoryboardPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardPath.swift; sourceTree = "<group>"; };
 		2F165C951CD16E8C00647C67 /* FileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFinder.swift; sourceTree = "<group>"; };
 		2F8725051D35D8750091CFDE /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
+		2F8725071D3710830091CFDE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2FB954751CD7B1980046FDC7 /* StoryboardParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardParser.swift; sourceTree = "<group>"; };
 		2FB9547A1CD7C56E0046FDC7 /* SegueHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandlerType.swift; sourceTree = "<group>"; };
 		2FB9547C1CD7EAA90046FDC7 /* CreateFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateFile.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				2FCCE34E1D35D6F100236A92 /* test.storyboard */,
 				2F8725051D35D8750091CFDE /* SegueHandlerType.swift */,
+				2F8725071D3710830091CFDE /* README.md */,
 				2F165C7D1CD16C9800647C67 /* XcodeExtractor */,
 				2FB954771CD7B1B50046FDC7 /* Utilities */,
 				2F165C7C1CD16C9800647C67 /* Products */,
@@ -193,6 +196,7 @@
 				2F165C881CD16CBC00647C67 /* Router.swift in Sources */,
 				2F165C7F1CD16C9800647C67 /* main.swift in Sources */,
 				2F165C8A1CD16CCB00647C67 /* PathTraveler.swift in Sources */,
+				2F8725081D3710830091CFDE /* README.md in Sources */,
 				2F165C961CD16E8C00647C67 /* FileFinder.swift in Sources */,
 				2FB9547B1CD7C56E0046FDC7 /* SegueHandlerType.swift in Sources */,
 				2FCCE34D1D35D63300236A92 /* String+Extras.swift in Sources */,
