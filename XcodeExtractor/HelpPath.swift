@@ -17,9 +17,18 @@ struct HelpPath: PathTraveler {
     }
     
     func walk() {
-        print("Help me")
-        // Create the help file
-        // Print the help file out to the screen
+        print(help())
+    }
+    
+    func help()->String {
+        var helpText = ""
+        helpText += "Extends the controllers to use an enum of the segues in the storyboards. \n\n"
+        
+        helpText += "  -d: the starting directory to perform the search upon and store the segue file within.\n"
+        helpText += "  -h,--help: the help information.\n"
+        helpText += "  -s: perform the search for segues.\n"
+        
+        return helpText
     }
     
 }
