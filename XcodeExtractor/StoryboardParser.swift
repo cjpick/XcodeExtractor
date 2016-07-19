@@ -9,20 +9,46 @@
 import Foundation
 
 
-enum Elements:String {
-    case Segue = "segue"
-    case ViewController = "viewController"
-    case TableViewCell = "tableViewCell"
+enum Element {
+    case segue(String)
+    case viewController(String)
+    case unknown
+}
+
+extension Element {
     
-    var identifier:String {
-        switch self {
-        case .Segue:
-            return "identifier"
-        case .ViewController:
-            return "customClass"
-        case .TableViewCell:
-            return "reuseIdentifier"
+    init(element:String, attributes:[String:String]) {
+        self = Element.createViewController(element: element, attributes: attributes) ?? Element.createSegue(element: element, attributes: attributes) ?? .unknown
+        
+//        switch(element, attributes["sceneMemberID"], attributes["customClass"], attributes["identifier"]) {
+//        case ("segue", _, _, let id):
+//            if let segueId = id {
+//                self = .segue(segueId)
+//                return
+//            }
+//        case (_, "viewController"?, let custom, _):
+//            if let customClass = custom {
+//                self = .viewController(customClass)
+//                return
+//            }
+//        default:
+//            break
+//        }
+//        self = .unknown
+    }
+    
+    static func createViewController(element:String, attributes:[String:String])->Element? {
+        if let customClass = attributes["customClass"] where attributes["sceneMemberID"] == "viewController" {
+            return .viewController(customClass)
         }
+        return nil
+    }
+    
+    static func createSegue(element:String, attributes:[String:String])->Element? {
+        if let id = attributes["identifier"] where element == "segue" {
+            return .segue(id)
+        }
+        return nil
     }
     
 }
@@ -44,20 +70,14 @@ class StoryboardParser:NSObject, XMLParserDelegate {
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName Name: String?, attributes attributeDict: [String : String]) {
-        if let element = Elements(rawValue: elementName) {
-            switch element {
-            case Elements.Segue:
-                if let identifier = attributeDict[Elements.Segue.identifier] {
-                    data.add(currentViewController, segue: identifier)
-                    
-                }
-            case Elements.ViewController:
-                if let controller = attributeDict[Elements.ViewController.identifier] {
-                    currentViewController = controller
-                }
-            default:
-                break
-            }
+        let element = Element(element: elementName, attributes: attributeDict)
+        switch(element) {
+        case .segue(let name):
+            data.add(currentViewController, segue: name)
+        case .viewController(let name):
+            currentViewController = name
+        case .unknown:
+            break
         }
     }
 }

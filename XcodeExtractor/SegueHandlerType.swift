@@ -59,7 +59,7 @@ struct SegueHandlerTypeCreator {
     
     func controllerExtensions()->String {
         var extensions = ""
-        for controller in data.controllers {
+        for controller in data.controllers.sorted() {
             extensions += "extension \(controller):SegueHandlerType {\n"
             extensions += "    enum SegueIdentifier:String {\n"
             for segue in data.seguesFor(controller) {

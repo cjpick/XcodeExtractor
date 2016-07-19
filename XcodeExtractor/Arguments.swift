@@ -19,7 +19,7 @@ struct Arguments {
     
     init() {
         var directory:String = ""
-        let args = ProcessInfo.processInfo.arguments
+        let args = Process.arguments
         var i = 1
         var tempPaths = [Path]()
         while i < args.count {

@@ -20,23 +20,30 @@ extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValu
     }
 }
 
-extension ThirdViewController:SegueHandlerType {
+extension ATableViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case thirdToFourth = "third to fourth"
-    }
-}
-
-extension SecondViewController:SegueHandlerType {
-    enum SegueIdentifier:String {
-        case second2Third = "Second 2 Third"
-        case twoTo4 = "two to 4"
+        case tableToSecond) = "table to second"
     }
 }
 
 extension FirstViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case buttonAction = "Button Action"
-        case firstToSecond = "First to Second"
+        case buttonAction) = "Button Action"
+        case firstToSecond) = "First to Second"
+        case tableSegue) = "Table segue"
+    }
+}
+
+extension SecondViewController:SegueHandlerType {
+    enum SegueIdentifier:String {
+        case second2Third) = "Second 2 Third"
+        case twoTo4) = "two to 4"
+    }
+}
+
+extension ThirdViewController:SegueHandlerType {
+    enum SegueIdentifier:String {
+        case thirdToFourth) = "third to fourth"
     }
 }
 

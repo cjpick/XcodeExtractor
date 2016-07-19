@@ -5,6 +5,27 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="Vaz-qq-G2h">
+            <objects>
+                <tableViewController id="hRT-Ri-wEf" customClass="ATableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="C5Q-XE-sYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="hRT-Ri-wEf" id="vfZ-5A-dRq"/>
+                            <outlet property="delegate" destination="hRT-Ri-wEf" id="SCu-ut-YEZ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Voi-Fh-89R" kind="show" identifier="table to second" id="XiK-6E-xZX"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixg-QC-QT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430" y="-463"/>
+        </scene>
         <!--First-->
         <scene sceneID="WuO-Rp-nVk">
             <objects>
@@ -35,6 +56,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Voi-Fh-89R" kind="presentation" identifier="First to Second" id="KwX-za-rEZ"/>
+                        <segue destination="hRT-Ri-wEf" kind="presentation" identifier="Table segue" id="S3U-wi-EIu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhJ-8M-YQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +148,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BE8-7N-5ej"/>
+        <segue reference="XiK-6E-xZX"/>
         <segue reference="9aK-mU-me2"/>
     </inferredMetricsTieBreakers>
 </document>
