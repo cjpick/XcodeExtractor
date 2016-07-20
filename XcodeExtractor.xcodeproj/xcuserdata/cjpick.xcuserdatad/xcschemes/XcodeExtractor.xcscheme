@@ -67,7 +67,15 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-d"
+            argument = "-dest"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/cjpick/Development/XcodeExtractor/"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-search"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

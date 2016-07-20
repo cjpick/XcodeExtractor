@@ -9,6 +9,11 @@
 import Foundation
 
 protocol PathTraveler {
+    
+    var hooks:[String] { get }
+    var description:String { get }
+    var arguments:Arguments! { set get }
+    
     func walk()
 }
 

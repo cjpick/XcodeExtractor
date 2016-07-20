@@ -50,4 +50,8 @@ public extension String {
         return temp
     }
     
+    func startWithDash()->Bool {
+        return String(characters.prefix(1)) == "-"
+    }
+    
 }

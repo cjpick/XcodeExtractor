@@ -10,11 +10,13 @@ import Foundation
 
 struct StoryboardPath: PathTraveler {
     
-    let arguments:Arguments
+    let hooks = ["-s", "-segue"]
+    let description = "perform the search for segues.\n"
+    var arguments:Arguments!
     
-    init(arg:Arguments) {
-        arguments = arg
-    }
+//    init(arg:Arguments) {
+//        arguments = arg
+//    }
     
     func walk() {
         print("Storyboard Path")

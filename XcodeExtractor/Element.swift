@@ -22,14 +22,14 @@ extension Element {
     }
     
     private static func createViewController(element:String, attributes:[String:String])->Element? {
-        if let customClass = attributes["customClass"] where attributes["sceneMemberID"] == "viewController" {
+        if let customClass = attributes["customClass"] , attributes["sceneMemberID"] == "viewController" {
             return .viewController(customClass)
         }
         return nil
     }
     
     private static func createSegue(element:String, attributes:[String:String])->Element? {
-        if let id = attributes["identifier"] where element == "segue" {
+        if let id = attributes["identifier"] , element == "segue" {
             return .segue(id)
         }
         return nil

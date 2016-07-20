@@ -12,21 +12,24 @@ import Foundation
 struct Router {
     
     let arguments:Arguments
+    var routes: [PathTraveler] = []
     
     init(arg:Arguments) {
         arguments = arg
     }
     
     func route() {
-        
-        for path in arguments.paths {
-            switch path {
-            case .help:
-                HelpPath(arg: arguments).walk()
-            case .storyboard:
-                StoryboardPath(arg: arguments).walk()
+        for var path in routes {
+            let compare = arguments.argumentPairs.filter { key, value in path.hooks.index(of: key) != NSNotFound }
+            if compare.count > 0 {
+                path.arguments = arguments
+                path.walk()
             }
         }
+    }
+    
+    mutating func add(traveler: PathTraveler) {
+        routes.append(traveler)
     }
     
 }
