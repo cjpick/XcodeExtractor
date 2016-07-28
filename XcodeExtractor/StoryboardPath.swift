@@ -11,7 +11,6 @@ import Foundation
 struct StoryboardPath: PathTraveler {
     
     let hooks = ["-s", "-segue"]
-    let description = "perform the search for segues.\n"
     var arguments:Arguments!
     
 //    init(arg:Arguments) {

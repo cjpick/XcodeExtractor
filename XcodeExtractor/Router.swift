@@ -19,13 +19,13 @@ struct Router {
     }
     
     func route() {
-        for var path in routes {
-            let compare = arguments.argumentPairs.filter { key, value in path.hooks.index(of: key) != NSNotFound }
-            if compare.count > 0 {
-                path.arguments = arguments
-                path.walk()
-            }
-        }
+//        for var path in routes {
+//            let compare = arguments.argumentPairs.filter { key, value in path.hooks.index(of: key) != nil }
+//            if compare.count > 0 {
+//                path.arguments = arguments
+//                path.walk()
+//            }
+//        }
     }
     
     mutating func add(traveler: PathTraveler) {

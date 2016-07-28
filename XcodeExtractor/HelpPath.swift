@@ -11,7 +11,6 @@ import Foundation
 struct HelpPath: PathTraveler {
     
     let hooks = ["-h", "-help"]
-    let description = "the help information.\n"
     var arguments:Arguments! = nil
     let router:Router
     
@@ -27,9 +26,14 @@ struct HelpPath: PathTraveler {
         var helpText = ""
         helpText += "Extends the controllers to use an enum of the segues in the storyboards. \n\n"
         
-        helpText += "  -d: the starting directory to perform the search upon and store the segue file within.\n"
-        helpText += "  -h,--help: the help information.\n"
-        helpText += "  -s: perform the search for segues.\n"
+        for switches in SwitchSettings.allSwitchSettings() {
+            helpText += switches.longDescription + "\n"
+        }
+//        
+//        helpText += "  -d, --dest: the directory to tore the segue file within.\n"
+//        helpText += "  -h,--help: the help information.\n"
+//        helpText += "  -s, --segue: perform the search for segues.\n"
+//        helpText += "  -p, --path: the path to perform the search upon.\n"
         
         return helpText
     }

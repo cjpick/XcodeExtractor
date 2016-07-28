@@ -47,7 +47,7 @@ struct SegueHandlerTypeCreator {
         handler += "    }\n"
             
         handler += "    public func segueIdentifierForSegue(segue: UIStoryboardSegue) -> SegueIdentifier {\n"
-        handler += "        guard let identifier = segue.identifier, segueIdentifier = SegueIdentifier(rawValue: identifier)\n"
+        handler += "        guard let identifier = segue.identifier, let segueIdentifier = SegueIdentifier(rawValue: identifier)\n"
         handler += "            else { fatalError(\"Invalid segue identifier \\(segue.identifier).\") }\n"
         handler += "        return segueIdentifier\n"
         handler += "    }\n"
@@ -63,7 +63,7 @@ struct SegueHandlerTypeCreator {
             extensions += "extension \(controller):SegueHandlerType {\n"
             extensions += "    enum SegueIdentifier:String {\n"
             for segue in data.seguesFor(controller) {
-                extensions += "        case \(segue.convertedSegueToCase())) = \"\(segue)\"\n"
+                extensions += "        case \(segue.convertedSegueToCase()) = \"\(segue)\"\n"
             }
             extensions += "    }\n"
             extensions += "}\n\n"

@@ -14,7 +14,7 @@ extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValu
         performSegueWithIdentifier(segueIdentifier.rawValue, sender: sender)
     }
     public func segueIdentifierForSegue(segue: UIStoryboardSegue) -> SegueIdentifier {
-        guard let identifier = segue.identifier, segueIdentifier = SegueIdentifier(rawValue: identifier)
+        guard let identifier = segue.identifier, let segueIdentifier = SegueIdentifier(rawValue: identifier)
             else { fatalError("Invalid segue identifier \(segue.identifier).") }
         return segueIdentifier
     }
@@ -22,28 +22,28 @@ extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValu
 
 extension ATableViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case tableToSecond) = "table to second"
+        case tableToSecond = "table to second"
     }
 }
 
 extension FirstViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case buttonAction) = "Button Action"
-        case firstToSecond) = "First to Second"
-        case tableSegue) = "Table segue"
+        case buttonAction = "Button Action"
+        case firstToSecond = "First to Second"
+        case tableSegue = "Table segue"
     }
 }
 
 extension SecondViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case second2Third) = "Second 2 Third"
-        case twoTo4) = "two to 4"
+        case second2Third = "Second 2 Third"
+        case twoTo4 = "two to 4"
     }
 }
 
 extension ThirdViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case thirdToFourth) = "third to fourth"
+        case thirdToFourth = "third to fourth"
     }
 }
 
