@@ -17,7 +17,7 @@ XcodeExtractor is a tool for automatically generating file for use within an xco
 * In the script line type "XcodeExtractor -s -dest (the location to your projects sources directory) -search (the location of the search directory)"
 
 ```
-XcodeExtractor -segue -dest /Users/me/HotProject/HotProject -search /Users/me/HotProject/HotProject
+XcodeExtractor -segue -d /Users/me/HotProject/HotProject -p /Users/me/HotProject/HotProject
 ```
 
 ## Restrictions
