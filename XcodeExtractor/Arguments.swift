@@ -85,7 +85,7 @@ extension SwitchSettings {
     }
     
     static func allSwitchSettings()->[SwitchSettings] {
-        return [SwitchSettings.destination(),SwitchSettings.help(),SwitchSettings.searchPath(), SwitchSettings.help()]
+        return [SwitchSettings.destination(),SwitchSettings.help(),SwitchSettings.searchPath(), SwitchSettings.segue()]
     }
 }
 
@@ -97,14 +97,6 @@ struct Arguments {
     let segue:Bool
     let destination:URL
     let searchPath:URL
-    
-    
-    var workingDir:URL {
-        return destination
-    }
-    var searchDir:URL {
-        return searchPath
-    }
     
     init() {
         let args = Arguments.argsGatherer()
@@ -123,9 +115,9 @@ struct Arguments {
             if args[i].startWithDash() {
                 if i+1 < args.count && !args[i+1].startWithDash() {
                     tempArgs[args[i]] = args[i+1]
+                    i += 1
                 } else {
                     tempArgs[args[i]] = ""
-                    i += 1
                 }
             }
             i += 1

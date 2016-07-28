@@ -10,12 +10,10 @@ import Foundation
 
 struct HelpPath: PathTraveler {
     
-    let hooks = ["-h", "-help"]
-    var arguments:Arguments! = nil
-    let router:Router
+    let arguments:Arguments
     
-    init(router: Router) {
-        self.router = router
+    init(arguments: Arguments) {
+        self.arguments = arguments
     }
     
     func walk() {

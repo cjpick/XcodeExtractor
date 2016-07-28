@@ -9,7 +9,5 @@
 import Foundation
 
 var router = Router(arg: Arguments())
-router.add(traveler: StoryboardPath())
-router.add(traveler: HelpPath(router: router))
 router.route()
 

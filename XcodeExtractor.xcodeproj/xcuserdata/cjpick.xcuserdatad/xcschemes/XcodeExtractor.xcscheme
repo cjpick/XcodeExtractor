@@ -67,7 +67,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-dest"
+            argument = "-d"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -75,7 +75,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-search"
+            argument = "-p"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

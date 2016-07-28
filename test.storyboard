@@ -19,7 +19,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="Voi-Fh-89R" kind="show" identifier="table to second" id="XiK-6E-xZX"/>
+                        <segue destination="Voi-Fh-89R" kind="show" identifier="table to 2" id="XiK-6E-xZX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ixg-QC-QT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +148,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KwX-za-rEZ"/>
+        <segue reference="XiK-6E-xZX"/>
         <segue reference="9aK-mU-me2"/>
     </inferredMetricsTieBreakers>
 </document>

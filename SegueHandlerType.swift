@@ -22,7 +22,7 @@ extension SegueHandlerType where Self: UIViewController, SegueIdentifier.RawValu
 
 extension ATableViewController:SegueHandlerType {
     enum SegueIdentifier:String {
-        case tableToSecond = "table to second"
+        case tableTo2 = "table to 2"
     }
 }
 

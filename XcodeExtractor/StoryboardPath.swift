@@ -10,16 +10,15 @@ import Foundation
 
 struct StoryboardPath: PathTraveler {
     
-    let hooks = ["-s", "-segue"]
-    var arguments:Arguments!
+    let arguments:Arguments
     
-//    init(arg:Arguments) {
-//        arguments = arg
-//    }
+    init(arguments: Arguments) {
+        self.arguments = arguments
+    }
     
     func walk() {
         print("Storyboard Path")
-        let finder = FileFinder(directory: arguments.workingDir, pathExtension:"storyboard").find()
+        let finder = FileFinder(directory: arguments.searchPath, pathExtension:"storyboard").find()
         
         var data = SegueData()
         for found in finder {
